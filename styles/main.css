@@ -1,0 +1,50 @@
+body{
+    background:#151515;
+}
+#claculator{
+    width:350px;
+    height:auto;
+}
+
+.total .screen{
+    background:#99CC00;
+    border-radius:5px;
+    box-shadow:inset 0px 4px #99CC00; 
+    height:70px;
+    width:autopx;
+    margin:auto;
+    margin-bottom:5px;
+    text-align:right;
+    font-size:36px;
+    padding:0 5px;
+}
+
+.keys span{
+    float:left;
+    position:relative;
+    top:0;
+    cursor:pointer;
+    width:69px;
+    height:36px;
+    margin:0 7px 11px 0;
+    background:#0F0F0F;
+    border-radius:5px;
+    box-shadow:0px 4px 5px #778899;
+    color:#E0FFFF;
+    line-height:36px;
+    text-align:center;
+    user-select:none;
+    transition:all 0.2s ease;
+    font-weight:bold;
+    font-size:28px;
+}
+
+.keys span:active{
+    box-shadow:0px 0px;
+    top:4px;
+}
+
+.special span:active{
+    box-shadow:0px 0px;
+    top:4px;
+}

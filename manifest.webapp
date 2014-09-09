@@ -1,0 +1,13 @@
+{
+    "name": "Simple Calculator",
+    "description": "A Simple Calculator",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/icons/app_icon.png"
+    },
+    "developer": {
+        "name": "Sushanth Somayaji",
+        "url": "wannabeg33k.blogspot.com"
+    },
+    "default_locale": "en"
+}
