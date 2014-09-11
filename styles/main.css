@@ -39,6 +39,25 @@ body{
     font-size:28px;
 }
 
+.keys span.special{
+    float:left;
+    position:relative;
+    top:0;
+    cursor:pointer;
+    width:69px;
+    height:36px;
+    margin:0 7px 11px 0;
+    background:#FF7F50;
+    border-radius:5px;
+    box-shadow:0px 4px 5px #F08080;
+    color:#E0FFFF;
+    line-height:36px;
+    text-align:center;
+    user-select:none;
+    transition:all 0.2s ease;
+    font-weight:bold;
+    font-size:28px;
+}
 .keys span:active{
     box-shadow:0px 0px;
     top:4px;
