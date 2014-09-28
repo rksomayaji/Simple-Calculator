@@ -1,4 +1,5 @@
 {
+    "version": "0.2",
     "name": "Simple Calculator",
     "description": "A Simple Calculator",
     "launch_path": "/index.html",
