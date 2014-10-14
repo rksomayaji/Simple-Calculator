@@ -1,5 +1,6 @@
 body{
     background:#151515;
+    overflow:hidden;
 }
 #claculator{
     width:350px;

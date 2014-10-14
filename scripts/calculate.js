@@ -95,6 +95,12 @@ for (var i=0;i<keys.length; i++) {
                     input.innerHTML = q;
                     calculated = true;
                     break;
+                case "ln":
+                    var s = Math.log(inputVal)
+                    var q = s.toString();
+                    input.innerHTML = q;
+                    calculated = true;
+                    break;
                 case "log":
                     var dn = Math.log(10);
                     var s = Math.log(inputVal)/dn
