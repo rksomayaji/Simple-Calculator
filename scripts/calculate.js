@@ -51,7 +51,12 @@ for (var i=0;i<keys.length; i++) {
                     if(equation)
                         input.innerHTML = eval(equation);
                     
-                    decimalAddedd = false;
+                    if((eval(equation)%1 == 0)){
+                        decimalAddedd = false;
+                    }
+                    else{
+                        decimalAddedd = true;
+                    }
                     calculated = true;
                     break;
                 case "+":
@@ -123,7 +128,12 @@ for (var i=0;i<keys.length; i++) {
                     if(equation)
                         input.innerHTML = eval(equation);
                     
-                    decimalAddedd = false;
+                    if((eval(equation)%1 == 0)){
+                        decimalAddedd = false;
+                    }
+                    else{
+                        decimalAddedd = true;
+                    }
                     calculated = true;
                     break;
                 case "+":
@@ -142,7 +152,6 @@ for (var i=0;i<keys.length; i++) {
                         input.innerHTML = inputVal.replace(/.$/,btnVal);
                     }
                     decimalAddedd = false;
-                    calculated = true;
                     break;
                 case ".":
                     if(!decimalAddedd){
