@@ -36,6 +36,18 @@ for (var i=0;i<keys.length; i++) {
                     input.innerHTML = q;
                     calculated = true;
                     break;
+                case "aln":
+                    var s = Math.round(Math.pow(Math.E, inputVal));
+                    var q = s.toString();
+                    input.innerHTML = q;
+                    calculated = true;
+                    break;
+                case "alog":
+                    var s = Math.round(Math.pow(10, inputVal));
+                    var q = s.toString();
+                    input.innerHTML = q;
+                    calculated = true;
+                    break;
                 case "AC":
                     input.innerHTML = '';
                     decimalAddedd = false;
@@ -108,7 +120,19 @@ for (var i=0;i<keys.length; i++) {
                     break;
                 case "log":
                     var dn = Math.log(10);
-                    var s = Math.log(inputVal)/dn
+                    var s = Math.log(inputVal)/dn;
+                    var q = s.toString();
+                    input.innerHTML = q;
+                    calculated = true;
+                    break;
+                case "aln":
+                    var s = Math.round(Math.pow(Math.E, inputVal));
+                    var q = s.toString();
+                    input.innerHTML = q;
+                    calculated = true;
+                    break;
+                case "alog":
+                    var s = Math.round(Math.pow(10, inputVal));
                     var q = s.toString();
                     input.innerHTML = q;
                     calculated = true;
