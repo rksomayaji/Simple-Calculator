@@ -2,6 +2,7 @@ var keys = document.querySelectorAll('#calculator span');
 var operators = ['+','-','*','/'];
 var decimalAddedd = false;
 var calculated = false;
+var isRadian = false;
 
 for (var i=0;i<keys.length; i++) {
     keys[i].onclick = function(e) {
@@ -51,6 +52,104 @@ for (var i=0;i<keys.length; i++) {
                 case "AC":
                     input.innerHTML = '';
                     decimalAddedd = false;
+                    break;
+                case "DEG":
+                    this.innerHTML = "RAD";
+                    isRadian = true;
+                    break;
+                case "RAD":
+                    this.innerHTML = "DEG";
+                    isRadian = false;
+                    break;
+                case "sin":
+                    if(isRadian){
+                        var s = Math.sin(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.sin(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "asin":
+                    if(isRadian){
+                        var s = Math.asin(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.asin(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "cos":
+                    if(isRadian){
+                        var s = Math.cos(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.cos(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "acos":
+                    if(isRadian){
+                        var s = Math.acos(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.acos(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "tan":
+                    if(isRadian){
+                        var s = Math.tan(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.tan(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "atan":
+                    if(isRadian){
+                        var s = Math.atan(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.atan(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
                     break;
                 case "=":
                     var equation = inputVal;
@@ -137,9 +236,107 @@ for (var i=0;i<keys.length; i++) {
                     input.innerHTML = q;
                     calculated = true;
                     break;
+                case "DEG":
+                    this.innerHTML = "RAD";
+                    isRadian = true;
+                    break;
+                case "RAD":
+                    this.innerHTML = "DEG";
+                    isRadian = false;
+                    break;
                 case "AC":
                     input.innerHTML = '';
                     decimalAddedd = false;
+                    break;
+                case "sin":
+                    if(isRadian){
+                        var s = Math.sin(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.sin(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "asin":
+                    if(isRadian){
+                        var s = Math.asin(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.asin(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "cos":
+                    if(isRadian){
+                        var s = Math.cos(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.cos(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "acos":
+                    if(isRadian){
+                        var s = Math.acos(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.acos(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "tan":
+                    if(isRadian){
+                        var s = Math.tan(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.tan(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    break;
+                case "atan":
+                    if(isRadian){
+                        var s = Math.atan(inputVal);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
+                    else{
+                        rad = inputVal * Math.PI/180;
+                        var s = Math.atan(rad);
+                        var p = s.toString();
+                        input.innerHTML = p;
+                        calculated = true;
+                    }
                     break;
                 case "=":
                     var equation = inputVal;
