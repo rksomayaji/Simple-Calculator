@@ -1,5 +1,25 @@
+/*
+*    Simple Calculator
+*    Copyright (C) 2014  Simple Calculator
+*
+*    This program is free software; you can redistribute it and/or modify
+*    it under the terms of the GNU General Public License as published by
+*    the Free Software Foundation; either version 2 of the License, or
+*    (at your option) any later version.
+*
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU General Public License for more details.
+*
+*    You should have received a copy of the GNU General Public License along
+*    with this program; if not, write to the Free Software Foundation, Inc.,
+*    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
 body{
     background:#151515;
+    overflow:hidden;
 }
 #calculator{
     width:auto;
@@ -39,6 +59,56 @@ body{
     font-size:28px;
 }
 
+.keys span.special{
+    float:left;
+    position:relative;
+    top:0;
+    cursor:pointer;
+    width:69px;
+    height:36px;
+    margin:0 7px 11px 0;
+    background:#FF7F50;
+    border-radius:5px;
+    box-shadow:0px 4px 5px #F08080;
+    color:#E0FFFF;
+    line-height:36px;
+    text-align:center;
+    user-select:none;
+    transition:all 0.2s ease;
+    font-weight:bold;
+    font-size:28px;
+}
+.keys span.specialIn{
+    float:left;
+    position:relative;
+    top:0;
+    cursor:pointer;
+    width:69px;
+    height:36px;
+    margin:0 7px 11px 0;
+    background:#3cb371;
+    border-radius:5px;
+    box-shadow:0px 4px 5px #20b2aa;
+    color:#E0FFFF;
+    line-height:36px;
+    text-align:center;
+    user-select:none;
+    transition:all 0.2s ease;
+    font-weight:bold;
+    font-size:28px;
+}
+.keys span.indicator{
+    float:left;
+    position:relative;
+    width:auto;
+    height:auto;
+    font-weight:normal;
+    font-size:10px;
+    background:transparent;
+    box-shadow:0 0 0 0;
+    margin:0 0 0 3px;
+    
+}
 .keys span:active{
     box-shadow:0px 0px;
     top:4px;
@@ -47,4 +117,28 @@ body{
 .special span:active{
     box-shadow:0px 0px;
     top:4px;
+}
+
+.spcl {
+    background: #444;
+    display:none;
+    transition: display 0.6s ease;
+}
+
+img.img-toggle {
+    width:28px;
+    height:8px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    cursor:pointer;
+    padding:5px;
+}
+
+.spl-toggle:checked + .keys > .spcl {
+    display:inline;
+}
+
+.spl-toggle {
+    display:none;
 }
