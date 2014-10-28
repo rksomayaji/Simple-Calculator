@@ -99,3 +99,27 @@ body{
     box-shadow:0px 0px;
     top:4px;
 }
+
+.spcl {
+    background: #444;
+    display:none;
+    transition: display 0.6s ease;
+}
+
+img.img-toggle {
+    width:28px;
+    height:8px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    cursor:pointer;
+    padding:5px;
+}
+
+.spl-toggle:checked + .keys > .spcl {
+    display:inline;
+}
+
+.spl-toggle {
+    display:none;
+}
