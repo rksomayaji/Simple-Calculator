@@ -4,6 +4,7 @@ var decimalAddedd = false;
 var calculated = false;
 var isRadian = false;
 var shifted = false;
+var isRaised = false;
 
 for (var i=0;i<keys.length; i++) {
     keys[i].onclick = function(e) {
@@ -43,6 +44,10 @@ for (var i=0;i<keys.length; i++) {
         }
         if(!calculated){
             switch (btnVal) {
+                case "x^y":
+                    input.innerHTML += "^";
+                    isRaised = true;
+                    break;
                 case "sq":
                     var s = Math.pow(inputVal, 2);
                     var q = s.toString();
@@ -190,8 +195,17 @@ for (var i=0;i<keys.length; i++) {
                         equation = equation.replace(/.$/,'');
                     }
                 
-                    if(equation)
-                        input.innerHTML = eval(equation);
+                    if(equation){
+                        if (!isRaised){
+                            input.innerHTML = eval(equation);
+                        }
+                        else{
+                            var first = equation.split("^")[0];
+                            var second = equation.split("^")[1];
+                            input.innerHTML = Math.pow(first,second);
+                            isRaised = false;
+                        }
+                    }
                     
                     if((eval(equation)%1 == 0)){
                         decimalAddedd = false;
@@ -232,6 +246,10 @@ for (var i=0;i<keys.length; i++) {
         }
         else{
             switch (btnVal) {
+                case "x^y":
+                    input.innerHTML += "^";
+                    isRaised = true;
+                    break;
                 case "sq":
                     var s = Math.pow(inputVal, 2);
                     var q = s.toString();
@@ -379,8 +397,17 @@ for (var i=0;i<keys.length; i++) {
                         equation = equation.replace(/.$/,'');
                     }
                 
-                    if(equation)
-                        input.innerHTML = eval(equation);
+                    if(equation){
+                        if (!isRaised){
+                            input.innerHTML = eval(equation);
+                        }
+                        else{
+                            var first = equation.split("^")[0];
+                            var second = equation.split("^")[1];
+                            input.innerHTML = Math.pow(first,second);
+                            isRaised = false;
+                        }
+                    }
                     
                     if((eval(equation)%1 == 0)){
                         decimalAddedd = false;
