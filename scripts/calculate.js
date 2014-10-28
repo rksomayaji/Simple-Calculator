@@ -3,6 +3,10 @@ var operators = ['+','-','*','/'];
 var decimalAddedd = false;
 var calculated = false;
 var isRadian = false;
+var shifted = false;
+var spcl = ["lo","ln","sq","si","co","ta"];
+var aspcl = ["alog","aln","sqrt","asin","acos","atan"];
+var spc = ["log","ln","sq","sin","cos","tan"];
 
 for (var i=0;i<keys.length; i++) {
     keys[i].onclick = function(e) {
@@ -10,6 +14,36 @@ for (var i=0;i<keys.length; i++) {
         var inputVal = input.innerHTML;
         var btnVal = this.innerHTML;
         
+        if(!shifted && btnVal == "SFT"){
+            var lo = document.getElementById("lo");
+            lo.innerHTML = "alog";
+            lo = document.getElementById("ln");
+            lo.innerHTML = "aln";
+            lo = document.getElementById("sq");
+            lo.innerHTML = "sqrt";
+            lo = document.getElementById("si");
+            lo.innerHTML = "asin";
+            lo = document.getElementById("co");
+            lo.innerHTML = "acos";
+            lo = document.getElementById("ta");
+            lo.innerHTML = "atan";
+            shifted = true;
+        }
+        else if(shifted && btnVal == "SFT"){
+            var lo = document.getElementById("lo");
+            lo.innerHTML = "log";
+            lo = document.getElementById("ln");
+            lo.innerHTML = "ln";
+            lo = document.getElementById("sq");
+            lo.innerHTML = "sq";
+            lo = document.getElementById("si");
+            lo.innerHTML = "sin";
+            lo = document.getElementById("co");
+            lo.innerHTML = "cos";
+            lo = document.getElementById("ta");
+            lo.innerHTML = "tan";
+            shifted = false;
+        }
         if(!calculated){
             switch (btnVal) {
                 case "sq":
@@ -192,6 +226,8 @@ for (var i=0;i<keys.length; i++) {
                         input.innerHTML += btnVal;
                         decimalAddedd = true;
                     }
+                    break;
+                case "SFT":
                     break;
                 default:
                     input.innerHTML += btnVal;
@@ -379,6 +415,8 @@ for (var i=0;i<keys.length; i++) {
                         input.innerHTML += btnVal;
                         decimalAddedd = true;
                     }
+                    break;
+                case "SFT":
                     break;
                 default:
                     input.innerHTML = btnVal;
