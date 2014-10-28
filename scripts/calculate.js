@@ -4,9 +4,6 @@ var decimalAddedd = false;
 var calculated = false;
 var isRadian = false;
 var shifted = false;
-var spcl = ["lo","ln","sq","si","co","ta"];
-var aspcl = ["alog","aln","sqrt","asin","acos","atan"];
-var spc = ["log","ln","sq","sin","cos","tan"];
 
 for (var i=0;i<keys.length; i++) {
     keys[i].onclick = function(e) {
